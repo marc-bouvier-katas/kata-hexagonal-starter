@@ -1,44 +1,37 @@
-# kata-hexagonal-starter project
+# kata-hexagonal-starter
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Java starter for modular (jigsaw) enforced implementation  of an hexagonal architecture.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+In this kata, you will first implement core domain logic in TDD. You can save your progress since the purpose of the kata is not the domain itself but to prove how to separate application / infrastructure / core domain. 
 
-## Running the application in dev mode
+Patterns that may be encountered
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
+- [Domain Model](https://martinfowler.com/eaaCatalog/domainModel.html)
+- [Repository](https://www.martinfowler.com/eaaCatalog/repository.html)
+- [InMemoryTestDatabase](https://martinfowler.com/bliki/InMemoryTestDatabase.html)
 
-## Packaging and running the application
+Practices that may occur
 
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `kata-hexagonal-starter-1.0.0-SNAPSHOT-runner.jar` file in the `/target` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
+- [Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
+- [GivenWhenThen style](https://martinfowler.com/bliki/GivenWhenThen.html)
+- [Behaviour-Driven Development (BDD)](https://dannorth.net/introducing-bdd/)
+- [Domain-Driven-Design]()
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
 
-The application is now runnable using `java -jar target/kata-hexagonal-starter-1.0.0-SNAPSHOT-runner.jar`.
 
-## Creating a native executable
+## Some ideas from this starter
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Pnative
-```
+- Implement ArchUnit Rules to check the hexagonal architecture is well enforced.
+- implement a cli
+- implement a reactive API
+- implement a rest API
+- implement a soap API
+- implement a heavy standalone client
+- implement a serverless function
+- evolving the domain given multiple applications / infrastructure modules
+- Migrate from Spring Application / infrastructure to Quarkus Application / infrastructure
+- Migrate core domain to kotlin and export it to target javascript
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
+## External
 
-You can then execute your native executable with: `./target/kata-hexagonal-starter-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
+Inspired by https://github.com/dstr89/hexagonal-java-modules

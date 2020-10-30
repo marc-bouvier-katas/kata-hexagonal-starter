@@ -1,0 +1,1 @@
+package fr.baldir.kata.infrastructure;

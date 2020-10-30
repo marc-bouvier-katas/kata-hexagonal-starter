@@ -1,0 +1,6 @@
+tasks:
+  - init: ./mvnw install -DskipTests=false
+
+vscode:
+  extensions:
+    - vscjava.vscode-maven@0.21.2:tFEkt2FqLujaNTLU5AmRiQ==
