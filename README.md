@@ -36,7 +36,6 @@ Practices that may occur
 
 Inspired by https://github.com/dstr89/hexagonal-java-modules
 
-
 ## Jigsaw FAQ
 
 - Why do I get `java.lang.reflect.InaccessibleObjectException: Unable to make xyz.XXXTest() accessible` when running 
@@ -56,4 +55,4 @@ Inspired by https://github.com/dstr89/hexagonal-java-modules
         </plugins>
         </build>
         ```
-    - [](https://stackoverflow.com/a/53462763)
+    - [More infos in this StackOverflow question](https://stackoverflow.com/a/53462763)
