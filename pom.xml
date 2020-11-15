@@ -21,7 +21,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
     </properties>
-
     <build>
         <plugins>
             <plugin>

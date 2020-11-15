@@ -1,29 +1,29 @@
 <?xml version="1.0" ?>
-<project 
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" 
-xmlns="http://maven.apache.org/POM/4.0.0" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>infrastructure</artifactId>
     <description>
-    Here you implement the implementation details of the infrastructure.
-    It depends on Application and Domain.
+        Here you implement the implementation details of the infrastructure.
+        It depends on Application and Domain.
 
-    In the future, there may be multiple infrastructure modules.
-  </description>
+        In the future, there may be multiple infrastructure modules.
+    </description>
     <parent>
         <groupId>fr.baldir.kata</groupId>
         <artifactId>kata-hexagonal-starter</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-<dependencies>
-    <dependency>
-        <artifactId>application</artifactId>
-        <groupId>fr.baldir.kata</groupId>
-        <version>${project.version}</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <dependency>
+            <artifactId>application</artifactId>
+            <groupId>fr.baldir.kata</groupId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
