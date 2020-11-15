@@ -1,0 +1,14 @@
+open module fr.baldir.kata.application {
+	//
+	// copied from "main"
+	//
+        requires fr.baldir.kata.domain;
+        exports fr.baldir.kata.application;
+        uses fr.baldir.kata.domain.ports.out.GreeterOutPort;
+	//
+	// test dependencies
+	//
+        requires org.junit.jupiter.api;
+        requires org.assertj.core.api;
+
+}

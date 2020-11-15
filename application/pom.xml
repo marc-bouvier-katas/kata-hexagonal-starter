@@ -1,17 +1,18 @@
 <?xml version="1.0" ?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    
+
     <artifactId>application</artifactId>
     <description>
-    Here you implement the left of the Hexagon.
-    It can be a simple CLI, a SOAP endpoint, a REST endpoint.
-    It should not depend on Infrastructure.
-    It should only depend on Domain.
+        Here you implement the left of the Hexagon.
+        It can be a simple CLI, a SOAP endpoint, a REST endpoint.
+        It should not depend on Infrastructure.
+        It should only depend on Domain.
 
-    There may be multiple applications using the same domain.
-  </description>
+        There may be multiple applications using the same domain.
+    </description>
     <properties>
         <assertj-core.version>3.13.2</assertj-core.version>
         <junit-jupiter.version>5.6.2</junit-jupiter.version>
@@ -47,6 +48,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!--
+                    Allows jupiter to use reflection on test classes of "application" module
+                    See : https://stackoverflow.com/a/53462763
+                    -->
+                    <argLine>--add-opens fr.baldir.kata.application/fr.baldir.kata.application=ALL-UNNAMED</argLine>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

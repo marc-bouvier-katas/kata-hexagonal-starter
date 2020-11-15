@@ -12,7 +12,9 @@ import java.util.Queue;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ConsoleAppTest {
+//In order to be visible by Junit without using reflection, Test class and method must be public
+// Another way to handle it would be to add argument to maven-surefire-plugin
+public class ConsoleAppTest {
     private static class QueueConsoleScanner implements ConsoleScanner {
         private Queue<String> commands = new ArrayDeque<>();
 
@@ -28,12 +30,12 @@ class ConsoleAppTest {
         }
     }
 
-    class Result {
+    private class Result {
         public String actualGreetingOutput;
     }
 
     @Test
-    void greet_someone_and_then_exit() throws IOException {
+     void greet_someone_and_then_exit() throws IOException {
         final Result greetingOutput = new Result();
 
         try (var outputStream = new ByteArrayOutputStream();
