@@ -4,7 +4,7 @@ name: Maven Build
 
 on:
   push:
-    branches: [ master , greetings-cli ]
+    branches: [ master , greetings-cli]
   pull_request:
     branches: [ master , greetings-cli ]
 
