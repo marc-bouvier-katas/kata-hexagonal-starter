@@ -35,3 +35,25 @@ Practices that may occur
 ## External
 
 Inspired by https://github.com/dstr89/hexagonal-java-modules
+
+
+## Jigsaw FAQ
+
+- Why do I get `java.lang.reflect.InaccessibleObjectException: Unable to make xyz.XXXTest() accessible` when running 
+  tests with maven?
+    - You must either make Test classes and test methods public (so that Jupiter do not need to use reflection)
+    - Or you can add argument to your maven-surefire-plugin to open your module/package to reflection
+        ```xml
+        <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>--add-opens fr.baldir.kata.application/fr.baldir.kata.application=ALL-UNNAMED</argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+        </build>
+        ```
+    - [](https://stackoverflow.com/a/53462763)
